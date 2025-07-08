@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('testimonials', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('boarding_house_id')
+                ->constrained('boarding_houses')
+                ->onDelete('cascade');
+            $table->string('photo'); // Path to the testimonial photo
+            $table->string('content'); // Content of the testimonial
+            $table->integer('rating'); // Rating given in the testimonial
             $table->timestamps();
         });
     }

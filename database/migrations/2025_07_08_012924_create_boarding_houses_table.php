@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('boarding_houses', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('slug')->unique();
+            $table->string('thumbnail');
+            $table->foreignId('city_id')->constrained('cities')->onDelete('cascade');
+            $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
+            $table->text('description');
+            $table->integer('price');
+            $table->text('address');
             $table->timestamps();
         });
     }
