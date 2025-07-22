@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\BoardingHouseResource\Pages;
 use App\Filament\Resources\BoardingHouseResource\RelationManagers;
 use App\Models\BoardingHouse;
+use Dom\Text;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -20,6 +21,8 @@ use Filament\Forms\Components\Tabs\Tab;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\TextInput;
 
 class BoardingHouseResource extends Resource
 {
@@ -64,9 +67,19 @@ class BoardingHouseResource extends Resource
                             Forms\Components\TextArea::make('address')
                                 ->required(),
                         ]),
-                    Tabs\Tab::make('Tab 2')
+                    Tabs\Tab::make('Bonus Ngekos')
                         ->schema([
-                            // ...
+                            Forms\Components\Repeater::make('bonuses')
+                            ->schema([
+                                FileUpload::make('image')
+                                ->image()
+                                ->directory('bonuses')
+                                ->required(),
+                                TextInput::make('name')
+                                ->required(),
+                                TextInput::make('description')
+                                ->required(),
+                            ])
                         ]),
                     Tabs\Tab::make('Tab 3')
                         ->schema([
