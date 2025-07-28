@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('name'); // Name of the bonus
             $table->text('description'); // Description of the bonus
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
