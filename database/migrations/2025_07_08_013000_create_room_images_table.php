@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('room_id')->constrained('rooms')->onDelete('cascade');
             $table->string('image'); // Path to the image file
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

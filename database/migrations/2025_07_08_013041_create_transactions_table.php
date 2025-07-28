@@ -30,6 +30,7 @@ return new class extends Migration
             $table->integer('total_amount')->nullable(); // Total amount for the transaction
             $table->date('transaction_date')->nullable(); // Date of the transaction
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

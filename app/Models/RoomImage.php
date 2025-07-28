@@ -7,6 +7,7 @@ use App\Models\Room;
 
 class RoomImage extends Model
 {
+    use \Illuminate\Database\Eloquent\SoftDeletes;
     protected $fillable = [
         'room_id',
         'image', // Path to the image file

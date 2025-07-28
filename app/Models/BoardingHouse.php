@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class BoardingHouse extends Model
 {
+    use \Illuminate\Database\Eloquent\SoftDeletes;
     protected $fillable = [
         'name',
         'slug',
@@ -16,7 +17,9 @@ class BoardingHouse extends Model
         'category_id',
         'description',
         'price',
-        'address'
+        'address',
+        
+        
     ];
 
     public function city()

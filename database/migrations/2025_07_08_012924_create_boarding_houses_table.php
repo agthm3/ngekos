@@ -22,6 +22,7 @@ return new class extends Migration
             $table->integer('price');
             $table->text('address');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

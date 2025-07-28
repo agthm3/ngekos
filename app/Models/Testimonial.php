@@ -7,6 +7,7 @@ use App\Models\BoardingHouse;
 
 class Testimonial extends Model
 {
+    use \Illuminate\Database\Eloquent\SoftDeletes;
     protected $fillable = [
         'boarding_house_id',
         'photo', // Path to the testimonial photo
