@@ -13,7 +13,8 @@ class Room extends Model
         'room_type',
         'square_feet',
         'price_per_month',
-        'is_available'
+        'is_available',
+        'capacity',
     ];
 
     public function boardingHouse()

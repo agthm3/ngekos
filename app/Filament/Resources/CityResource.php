@@ -33,7 +33,7 @@ class CityResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255)
-                    ->debounce(500)
+                    ->debounce(600)
                     ->reactive()
                     ->afterStateUpdated(function ($state, callable $set) {
                         $set('slug', str($state)->slug());
