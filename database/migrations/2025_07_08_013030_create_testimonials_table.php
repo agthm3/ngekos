@@ -19,7 +19,9 @@ return new class extends Migration
             $table->string('photo'); // Path to the testimonial photo
             $table->string('content'); // Content of the testimonial
             $table->integer('rating'); // Rating given in the testimonial
+            $table->string('name'); // Name of the person giving the testimonial
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

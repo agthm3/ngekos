@@ -6,7 +6,10 @@ use App\Models\Category;
 
 use Illuminate\Database\Eloquent\Model;
 
-class BoardingHouse extends Model
+class 
+
+
+BoardingHouse extends Model
 {
     use \Illuminate\Database\Eloquent\SoftDeletes;
     protected $fillable = [

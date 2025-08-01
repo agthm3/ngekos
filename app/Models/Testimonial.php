@@ -12,7 +12,9 @@ class Testimonial extends Model
         'boarding_house_id',
         'photo', // Path to the testimonial photo
         'content', // Content of the testimonial
-        'rating' // Rating given in the testimonial
+        'rating', // Rating given in the testimonial
+        'name', // Name of the person giving the testimonial
+
     ];
 
     public function boardingHouse()
