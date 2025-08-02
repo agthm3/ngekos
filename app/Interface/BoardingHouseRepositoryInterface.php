@@ -4,7 +4,7 @@ namespace App\Interface;
 
 interface BoardingHouseRepositoryInterface
 {
-    public function getAllBoardingHouses($search = null, $cit = null, $category = null);
+    public function getAllBoardingHouses($search = null, $city = null, $category = null);
 
     public function getPopularBoardingHouses($limit = 5);
 
