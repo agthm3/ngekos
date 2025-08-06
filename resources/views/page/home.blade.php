@@ -154,5 +154,4 @@
               @endforeach
             </div>
         </section>
-      @include('includes.navigation')
-@endsection
+@include('includes.navigation')
