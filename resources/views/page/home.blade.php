@@ -17,7 +17,9 @@
         </div>
         <div id="Categories" class="swiper w-full overflow-x-hidden mt-[30px]">
             <div class="swiper-wrapper">
+                {{-- @dd($categories) --}}
                 @foreach ($categories as $item)
+                {{-- @dd($item->boardingHouses) --}}
                     <div class="swiper-slide !w-fit pb-[30px]">
                         <a href="categories.html" class="card">
                             <div
@@ -28,7 +30,7 @@
                                 </div>
                                 <div class="flex flex-col gap-[2px]">
                                     <h3 class="font-semibold">{{ $item->name }}</h3>
-                                    <p class="text-sm text-ngekos-grey">1,304 Kos</p>
+                                    <p class="text-sm text-ngekos-grey">{{ $item->boardingHouses->count()}} Kos</p>
                                 </div>
                             </div>
                         </a>
@@ -108,7 +110,7 @@
                         </div>
                         <div class="flex flex-col gap-[2px]">
                             <h3 class="font-semibold">{{ $item->name }}</h3>
-                            <p class="text-sm text-ngekos-grey">{{ $item->boarding_houses_count }} Kos</p>
+                            <p class="text-sm text-ngekos-grey">{{ $item->boardingHouses->count() }} Kos</p>
                         </div>
                     </div>
                 </a>

@@ -13,3 +13,4 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/check-booking', [BookingController::class, 'check'])->name('check-booking');
 Route::get('/find-kos',[BoardingHouseController::class, 'find'])->name('find-kos');
+Route::get('/find-results', [BoardingHouseController::class, 'findResults'])->name('find-kos.results');
